@@ -1,21 +1,40 @@
+# Asistencia - Sistema de Registro de Asistencia por Reconocimiento Facial
 
-Asistensia - Sistema de Registro de Asistencia por Reconocimiento Facial
-Este proyecto utiliza OpenCV y Face Recognition para crear un sistema simple de registro de asistencia por reconocimiento facial. Las caras de los empleados se registran previamente, y el sistema identifica y registra la hora de entrada de los empleados cuando aparecen frente a la cámara.
+Este proyecto utiliza **OpenCV** y **Face Recognition** para crear un sistema simple de registro de asistencia mediante reconocimiento facial. Las caras de los empleados se registran previamente, y el sistema identifica y registra la hora de entrada cuando un empleado aparece frente a la cámara.
 
-Requisitos
-Python 3.6 o superior
-OpenCV
-Face Recognition
-Numpy
-Instalación
-Clona el repositorio
-Entra al directorio del proyecto
-Instala las dependencias
+---
 
-MODO DE USO:
-Prepara una carpeta con imágenes de los empleados en el directorio especificado en el código.
-Ejecuta el script:
-La cámara web se activará y reconocerá caras. Los nombres de los empleados se mostrarán si se encuentran en la base de datos y se registrará la hora de entrada en el archivo "registro.csv".
+## Requisitos
 
-Configuración
-Asegúrate de tener una carpeta con las imágenes de los empleados en el directorio especificado en el código. Puedes ajustar los parámetros según tus necesidades.
+- Python 3.6 o superior  
+- OpenCV  
+- face_recognition  
+- numpy  
+
+---
+
+## Instalación
+
+1. Clona el repositorio:  
+   `git clone https://github.com/carlossalgado1/Control-de-asistencia-con-reconocimiento-facial.git`
+
+2. Entra al directorio del proyecto:  
+   `cd Control-de-asistencia-con-reconocimiento-facial`
+
+3. Crea y activa un entorno virtual (opcional pero recomendado):  
+   ```bash
+   python -m venv env
+   source env/bin/activate    # Linux/Mac
+   .\env\Scripts\activate     # Windows
+Instala las dependencias:
+pip install -r requirements.txt
+
+Modo de uso
+Prepara una carpeta llamada Empleados dentro del directorio del proyecto, con imágenes de los empleados. Cada archivo debe llamarse con el nombre del empleado, por ejemplo juan.jpg, maria.png, etc.
+
+Ejecuta el script principal:
+python asistencia.py
+
+Se activará la cámara web y comenzará a detectar y reconocer las caras. Si se reconoce a un empleado, se mostrará su nombre en la pantalla y se registrará su hora de entrada en el archivo registro.csv.
+
+Para salir, presiona la tecla q.
