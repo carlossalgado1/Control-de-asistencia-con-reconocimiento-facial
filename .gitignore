@@ -1,0 +1,10 @@
+env310/
+__pycache__/
+*.pyc
+*.pyo
+*.exe
+*.bat
+*.ps1
+*.cfg
+*.log
+*.DS_Store
